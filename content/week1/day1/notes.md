@@ -83,3 +83,20 @@
 - graphs
 - dynamic programming
   > order matters, builds on itself
+
+### is it enough to solve the problem
+
+- NO
+  - we must analyze and understand our solutions
+  - we must ensure we can confidently communicate our ideas
+  - track progres, memorize concepts and ideas, not solutions
+
+### track progress
+
+- notion calendar
+
+### how to get most out of workshop
+
+- document progress: spend last 5-10 min of pairboarding sessions writing a few short notes about problem
+  - reflect on every problem you do, regardless of how easy or hard
+  - mark down problems you struggled with, return to them after a week so that it isnt fresh on your mind
