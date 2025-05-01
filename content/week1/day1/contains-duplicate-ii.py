@@ -21,22 +21,37 @@
 # -109 <= nums[i] <= 109
 # 0 <= k <= 105
 
-class Solution: 
-    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
-        window = set()
-        L = 0;
-        for R in range(len(nums)):
-            if R - L > k:
-                window.remove(nums[L])
-                L += 1
-            if nums[R] in window:
-                return True
-            window.add(nums[R])
-        return False
+# class Solution: 
+#     def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+#         window = set()
+#         L = 0;
+#         for R in range(len(nums)):
+#             if R - L > k:
+#                 window.remove(nums[L])
+#                 L += 1
+#             if nums[R] in window:
+#                 return True
+#             window.add(nums[R])
+#         return False
     
 
-s = Solution()
+class Solution:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+        window = set()
+        left = 0;
 
+        for right in range(len(nums)):
+            if right - left > k:
+                window.discard(nums[left])
+                left += 1
+            if nums[right] in window:
+                return True
+            window.add(nums[right])
+
+        return False
+
+
+s = Solution()
 print(s.containsNearbyDuplicate([1, 2, 3, 1], 3))       # True
 print(s.containsNearbyDuplicate([1, 0, 1, 1], 1))       # True
 print(s.containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)) # False
