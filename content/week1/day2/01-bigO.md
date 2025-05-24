@@ -1,4 +1,4 @@
-# algo academy - week 2 - day 1 = big o notation
+# algo academy - week 1 - day 2 - big o notation
 
 ## Big O Notation / Analysis
 
@@ -130,4 +130,23 @@
 
 ### O(n \* log(n))
 
-- marginally more inefficient than O(n) but much more efficient than O(n^2)
+- marginally less inefficient than O(n) but much more efficient than O(n^2)
+- examples:
+  - merge sort
+  - most built in sorting functions
+
+### O(2^n) - exponential
+
+- most common with multi-path recursion
+- multi-path recursive functions can be analyzed with the following formula:
+  - (# of paths)^(depth of stack)
+- see screenshot 01 - O(2^n) exponential
+
+### O(n!) - factorial
+
+- very rare and is unlikely to come up with an interview problem
+- horribly inefficient - worst of worst case scenarios
+- the only problems that require this are very difficult problems that are considered "NP-complete" - nondeterministic polynomial-time complete
+- not necessary to put too much focus here
+- examples
+  - finding all permutations
