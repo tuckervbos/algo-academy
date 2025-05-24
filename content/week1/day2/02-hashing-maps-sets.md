@@ -58,3 +58,9 @@
   - hashmap["Alice"] = "NYC";
   - hashmap["Brad"] = "Chicago";
   - hashmap["Collin"] = "Seattle";
+
+### demos
+
+- two sum
+- matrix set zeros
+- group anagrams
