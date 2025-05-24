@@ -54,7 +54,7 @@ class Solution:
             for c in range(len(board[0])):
                 curr_val = board[r][c]
                 if curr_val != '.':
-                    box_coord = f'{r//3},{c//3}'
+                    box_coord = f'{r//3},{c//3}' # integer division
                     if curr_val in row[r] or curr_val in col[c] or curr_val in box[box_coord]:
                         return False
                     row[r].add(curr_val)
@@ -85,3 +85,29 @@ board2 = [["8","3",".",".","7",".",".",".","."]
 ,[".",".",".",".","8",".",".","7","9"]]
 
 print(Solution().isValidSudoku(board2)) # False
+
+# time complexity:
+# space complexity:
+
+
+
+# approach notes
+# how do we know that a particular cell belongs to a particular box?
+# in js, we could use something like Math.floor(r/3)
+# in python, just say r//3 (automatic integer division, will just round it down)
+
+# cell (1,7) r//3 = 0 
+#            c//3 = 2 (2.33 rounded down)
+#            key = 0,2  (this is our key for box hashmap)
+
+
+# alternate solution from chat
+# class Solution(object): 
+#     def isValidSudoku(self, board): 
+#         res = [] 
+#         for i in range(9): 
+#             for j in range(9): 
+#                 element = board[i][j] 
+#                 if element != '.': 
+#                     res += [(i, element), (element, j), (i // 3, j // 3, element)] 
+#                 return len(res) == len(set(res))
