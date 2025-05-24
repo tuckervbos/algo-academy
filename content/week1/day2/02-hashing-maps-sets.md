@@ -62,5 +62,5 @@
 ### demos
 
 - two sum
-- matrix set zeros
+- set matrix zeros
 - group anagrams
