@@ -32,7 +32,7 @@ class Solution:
         """
         do not return anything, modify nums in-place instead
         """
-        counts = [0] * 3 # [0, 0, 0]
+        counts = [0] * 3 # [0, 0, 0] 
 
         for n in nums:
             counts[n] += 1
