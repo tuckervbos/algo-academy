@@ -72,3 +72,10 @@ class Solution:
 ### searching ranges
 
 - demo: guess number higher or lower
+
+### practice
+
+- review: search a 2D matrix
+  find a peak element
+- bonus: koko eating bananas
+  search in rotated sort array
