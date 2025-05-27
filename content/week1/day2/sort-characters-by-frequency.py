@@ -59,5 +59,4 @@ print(Solution().frequencySort(s2)) # "aaaccc" || "cccaaa"
 s3 = "Aabb"
 print(Solution().frequencySort(s3)) # "bbAa"
 
-# time complexity: O(n) because 
-# space complexity: O(n + c)
+# time complexity: O(n) 
