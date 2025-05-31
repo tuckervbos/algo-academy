@@ -28,15 +28,17 @@
 # 1 <= n <= 231 - 1
 # 1 <= pick <= n
 
-class Solution:
-    def guess(self, n: int) -> int:
-        left, right = 0, n
-        while left <= right:
-            mid = left + (right-left)//2
+# class Solution:
+#     def guessNumber(self, n: int) -> int:
+#         left, right = 0, n
+#         while left <= right:
+#             mid = left + (right-left)//2
 
-            if guess(mid) == -1:
-                right = mid-1
-            elif guess(mid) == 1:  
-                left = mid+1
-            else:
-                return mid
+#             if guess(mid) == -1:
+#                 right = mid-1
+#             elif guess(mid) == 1:  
+#                 left = mid+1
+#             else:
+#                 return mid
+            
+# guess api is set up for you in the problem 

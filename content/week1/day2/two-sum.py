@@ -17,9 +17,16 @@
 # input: nums = [3,2,4] target = 6
 # output: [1,2]
 
+# approach: hashtable
+# iterate through nums w/ enumerate to assign index
+# find complement (target - num)
+# check if it's in hash, if it is, return i and num
+# if not, add to hash (hash[num] = i)
+
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         hash = {}
+        
         for i, num in enumerate(nums):
             complement = target - num
             if complement in hash:
