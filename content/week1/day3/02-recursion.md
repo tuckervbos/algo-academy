@@ -34,3 +34,38 @@ def traverse(head):
 ### single path demo
 
 - example: reverse linked list
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None)
+        self.val = val
+        self.next = next
+
+class Solution:
+    def reverseList(self, Optional[ListNode]) -> Optional[ListNode]:
+        prev=None
+        def _helper(head, prev):
+            if head is None:
+                return prev # returns the new head of the newly reversed linked list
+            next = head.next # save next before overwritting
+            head.next = prev # overwrite/reverse pointer
+            return _helper(next, head) # move down the list
+        return _helper(head, prev) # recursive call/step
+```
+
+### runtime complexity
+
+- single-path recursive functions usually run O(n) where n is depth of stack
+- multi-path recursive functions can be analyzed with the following formula: (# of paths)^(depth of stack)
+- [runtime-complexity](/content/week1/day3/runtime-complexity.png)
+- tree in the above photo represents recursive fibonacci function
+- each node has at most 2 branching paths
+- depth of stack is 5, which is input
+- thus we can call this O(2^n) where n is our input number O(2^5)
+- extremely inefficient, only factorial is worse
+
+### drawbacks of exponential runtimes
+
+- exponential runtimes are extremely inefficient
+- if you run into exponential runtimes, there is likely a way to reduce the time complexity somehow (we will discuss this much later when we get to dynamic programming)
+- unique paths (brute force)
