@@ -104,3 +104,19 @@ def traverse(head):
 
 - [middle of the linked list](https://leetcode.com/problems/middle-of-the-linked-list/description/)
 - [reverse linked list](https://leetcode.com/problems/reverse-linked-list/description/)
+
+## cycle detection
+
+- fast and slow pointers can also be used with linked lists to detect loops within the list
+- demo:
+  - [linked list cycle]()
+
+## queues
+
+- fifo (first in first out)
+- because we can add/remove nodes at the beginning of a linked list (and the end) in O(1) time, it is actually more efficient to create a queue this way versus an array
+- in python, we can use dequeue from collections library
+- enqueue: O(1)
+- dequeue: O(1)
+
+## reverse linked list:
