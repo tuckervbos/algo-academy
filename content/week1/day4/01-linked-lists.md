@@ -100,4 +100,7 @@ def traverse(head):
 - [comparing-array-runtimes](/content/week1/day4/01.3-comparing-array-runtimes.png)
 - LRUcache problem - great example of linked list implementation
 
-##
+## demos
+
+- [middle of the linked list](https://leetcode.com/problems/middle-of-the-linked-list/description/)
+- [reverse linked list](https://leetcode.com/problems/reverse-linked-list/description/)
