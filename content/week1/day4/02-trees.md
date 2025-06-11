@@ -59,4 +59,35 @@ class TreeNode:
   - can search in O(logn) time complexity
 - demo: [search in a binary search tree](https://leetcode.com/problems/search-in-a-binary-search-tree/description/)
 
-###
+### depth first search + breadth first search
+
+- some of _THE_ most important and common algorithms that you can learn
+- DFS+BFS can solve large majority of tree and graph problems by themselves
+- is the foundation for many more complicated algorithms such as djikstra or topological sorting if you choose to (not necessary for 99% of interviews)
+
+### depth first search
+
+- searches as deep into one path as possible before searching a different path
+- 3 types:
+  - in-order traversal
+  - pre-order traversal
+  - post-order traversal
+- utilizes a stack
+  - this makes recursion perfect since recursion inherently uses a stack via the call stack
+
+### in-order DFS
+
+- steps
+  - traverse left subtree
+  - process node
+  - traverse right subtree
+- demo:
+  - binary tree inorder traversal
+
+```python
+def inorderTraversal(root):
+    if not root: return
+    inorderTraversal(root.left)
+    print(root.val)
+    inorderTraversal(root.right)
+```
