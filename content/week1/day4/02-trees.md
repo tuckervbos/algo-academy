@@ -91,3 +91,36 @@ def inorderTraversal(root):
     print(root.val)
     inorderTraversal(root.right)
 ```
+
+### pre-order dfs
+
+- steps
+  - process node
+  - traverse left subtree
+  - traverse right subtree
+- demo: binary tree preorder traversal
+
+```python
+def preorderTraversal(root):
+    if not root: return
+    print(root.val)
+    inorderTraversal(root.left)
+    inorderTraversal(root.right)
+```
+
+### post-order dfs
+
+- steps
+  - traverse left tree
+  - traverse right tree
+  - process node
+- demo: binary tree postorder traversal
+- followup: can we reverse the order of our traversal?
+
+```python
+def postorderTraversal(root):
+    if not root: return
+    inorderTraversal(root.left)
+    inorderTraversal(root.right)
+    print(root.val)
+```
