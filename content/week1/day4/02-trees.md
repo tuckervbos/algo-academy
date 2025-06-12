@@ -61,7 +61,7 @@ class TreeNode:
 
 ### depth first search + breadth first search
 
-- some of _THE_ most important and common algorithms that you can learn
+- some of **THE** most important and common algorithms that you can learn
 - DFS+BFS can solve large majority of tree and graph problems by themselves
 - is the foundation for many more complicated algorithms such as djikstra or topological sorting if you choose to (not necessary for 99% of interviews)
 
@@ -123,4 +123,37 @@ def postorderTraversal(root):
     inorderTraversal(root.left)
     inorderTraversal(root.right)
     print(root.val)
+```
+
+### dfs runtime
+
+- search tree: O(n)
+- sometimes you may see O(e + v) = edges + vertices
+
+### breadth first search
+
+- question: what can bfs be used for that dfs isn't best for?
+
+  - anything with layers / levels
+  - closest thing, shortest path
+
+- searches thru nodes level by level
+- we process nodes closest to the root first
+- this algorithm is very useful when finding shortest paths or when dealing with layers
+- utilizes a **QUEUE**
+  - because recursion uses a stack, we always want to just run BFS iteratively (you'll always be trying to make a stack into a queue)
+  -
+
+### breadth first search continued
+
+- steps
+  - add root to the queue
+  - shift out a 'current node' from queue
+  - process current node
+  - push current node's children into queue
+  - repeat process until queue is empty
+- demo: binary tree level order traversal
+
+```python
+
 ```
