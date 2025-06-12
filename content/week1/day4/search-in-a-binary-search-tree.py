@@ -37,3 +37,51 @@ class Solution:
             return self.searchBST(root.right, val)
         else:
             return root
+        
+
+
+# Helper to print a subtree as a list in preorder (for simple output)
+def print_subtree_preorder(node):
+    if not node:
+        return
+    print(node.val, end=" ")
+    print_subtree_preorder(node.left)
+    print_subtree_preorder(node.right)
+
+# Test 1: Search for an existing value in the BST
+print("Test 1:")
+# Tree:        4
+#             / \
+#            2   7
+#           / \
+#          1   3
+root1 = TreeNode(4,
+         TreeNode(2, TreeNode(1), TreeNode(3)),
+         TreeNode(7)
+)
+result1 = Solution().searchBST(root1, 2)
+print_subtree_preorder(result1)  # Expected: 2 1 3
+print()
+
+# Test 2: Search for a value not in the BST
+print("Test 2:")
+result2 = Solution().searchBST(root1, 5)
+print(result2)  # Expected: None
+
+# Test 3: Search for root value
+print("Test 3:")
+result3 = Solution().searchBST(root1, 4)
+print_subtree_preorder(result3)  # Expected: 4 2 1 3 7
+print()
+
+# Test 4: Tree with one node, value exists
+print("Test 4:")
+root4 = TreeNode(10)
+result4 = Solution().searchBST(root4, 10)
+print_subtree_preorder(result4)  # Expected: 10
+print()
+
+# Test 5: Tree with one node, value doesn't exist
+print("Test 5:")
+result5 = Solution().searchBST(root4, 5)
+print(result5)  # Expected: None

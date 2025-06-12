@@ -157,3 +157,9 @@ def postorderTraversal(root):
 ```python
 
 ```
+
+### bfs runtime
+
+- search tree: O(n) time complexity
+- also described as O(e + v) (edges/vertices)
+- [traversals](./02.1-bfs-dfs-traversals.png)

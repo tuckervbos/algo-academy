@@ -34,15 +34,44 @@ class Solution:
             queueLen = len(queue)
             level = []
             for i in range(queueLen):
-
             # shift out from queue
                 node = queue.popleft()
                 if node:
                     level.append(node.val)
                     queue.append(node.left)
-                    # adding children to queue
-                    queue.append(node.left)
                     queue.append(node.right)
             if level:
                 output.append(level)
         return output
+    
+
+
+# Helper to build trees manually
+def test_level_order():
+    sol = Solution()
+
+    # Test 1: root = [3,9,20,null,null,15,7]
+    root1 = TreeNode(3)
+    root1.left = TreeNode(9)
+    root1.right = TreeNode(20)
+    root1.right.left = TreeNode(15)
+    root1.right.right = TreeNode(7)
+    print("Test 1:", sol.levelOrder(root1))  # Expected: [[3],[9,20],[15,7]]
+
+    # Test 2: root = [1]
+    root2 = TreeNode(1)
+    print("Test 2:", sol.levelOrder(root2))  # Expected: [[1]]
+
+    # Test 3: root = []
+    root3 = None
+    print("Test 3:", sol.levelOrder(root3))  # Expected: []
+
+    # Test 4: root = [1, 2, 3, 4, None, None, 5]
+    root4 = TreeNode(1)
+    root4.left = TreeNode(2)
+    root4.right = TreeNode(3)
+    root4.left.left = TreeNode(4)
+    root4.right.right = TreeNode(5)
+    print("Test 4:", sol.levelOrder(root4))  # Expected: [[1], [2, 3], [4, 5]]
+
+test_level_order()
