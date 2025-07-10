@@ -35,7 +35,8 @@ class Solution:
         return res
     
 
-
+# weird time complexity: 4^n / (n * sqrt(n))
+# don't need to know this, just that it is exponential and ineficcient 
 
 
     
